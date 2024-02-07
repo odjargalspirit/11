@@ -73,3 +73,79 @@ const ValentinePage = () => {
       <h1 style={{ color: 'black', fontSize: '2em' }}>
         Чи надтай болзоонд явах уу?
       </h1>
+      <img
+        src="/panda.gif"
+        alt="Cute Panda"
+        width="200"
+        height="200"
+        style={{ display: 'block', margin: 'auto', cursor: 'pointer' }}
+        onClick={handleTripleClick} 
+      />
+
+      <div style={{ marginTop: '20px' }}>
+        <button
+          onClick={() => handleClick('Тийм')}
+          style={{
+            fontSize: `${ТиймButtonSize}em`,
+            backgroundColor: 'green',
+            color: 'white',
+            transition: 'font-size 0.5s',
+            borderRadius: '10px',
+            padding: '10px 20px',
+            margin: '0 10px',
+            cursor: 'pointer',
+          }}
+        >
+          Тийм
+        </button>
+        {showҮгүйButton && (
+          <button
+            onClick={() => handleClick('Үгүй')}
+            style={{
+              backgroundColor: 'red',
+              color: 'white',
+              borderRadius: '10px',
+              padding: '10px 20px',
+              margin: '0 10px',
+              cursor: 'pointer',
+            }}
+          >
+            {persuadeText || 'Үгүй'}
+          </button>
+        )}
+      </div>
+
+      {showThanks && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'lavender',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            opacity: 0,
+            animation: 'fadeIn 2s forwards',
+          }}
+        >
+          <Confetti
+            active={showLeftConfetti }
+            config={{
+              angle: 90,
+              spread: 360,
+              startVelocity: 45,
+              elementCount: 240, // Adjust element count as needed
+              decay: 0.7,
+            }}
+          />
+          <Confetti
+            active={showLeftConfetti}
+            config={{
+              angle: 180,
+              spread: 360,
+              startVelocity: 
+
