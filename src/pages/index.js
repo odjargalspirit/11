@@ -23,25 +23,25 @@ const ValentinePage = () => {
   }, [showThanks]);
 
   const persuadeTexts = [
-    'Are you sure? ',
-    'You might regret it!',
-    'Really? Think again!',
-    'Come on, don\'t be shy! Give it a shot!',
-    'Imagine all the fun we could have!',
-    'I promise it will be worth it!',
-    'Don\'t let this opportunity slip away!',
-    'Just say yes! What do you have to lose?',
-    'You don\'t want to miss out on this, trust me!',
-    'I have made this especially for you!',
-    'Say yes and let the magic begin!',
-    'You\'re breaking my heart!',
-    'I would be sad. Say yes!',
-    'Last chance! Say yes and make my day!',
-    'You are leaving me no choice! Say yes!'
+    'Чи итгэлтэй байна уу? ',
+    'Чи харамсаж магадгүй шүү!',
+    'Үнэнээсээ юу? Дахиад боддоо!',
+    'Алив л дээ битгий ичээ ! Боломж олго л доо!',
+    'Би ямар их хөгжилтэй байхыг төсөөлдөө!',
+    'Би амлая үнэхээр гоё байх болноо!',
+    'Битгий боломжийг салхинд хийсгээрэй!',
+    'Зүгээр л тийм гэж хэл?',
+    'Чи үүнийг алгасахыг хүсэхгүй, Надад итгээрэй!',
+    'Би үүнийг зөвхөн чамд л хийсэн!',
+    'Тийм гэж хэлээд бүхнийг эхлүүлцгээе!',
+    'Чи миний зүрхийг зүсэж байна!',
+    'Би гунигт автлаа. Тийм гэж хэлээч!',
+    'Сүүлийн боломж! Тийм гэж хэлээд миний өдрийг авар!',
+    'Чи намайг сонголтгүй үлдээж байна! Тийм гэж хэл!'
   ];
 
   const handleClick = (answer) => {
-    if (answer === 'No') {
+    if (answer === 'Үгүй') {
       setYesButtonSize((prevSize) => prevSize + 0.4);
       setPersuadeText(persuadeTexts[persuadeCount]);
       setPersuadeCount((prevCount) => prevCount + 1);
@@ -49,7 +49,7 @@ const ValentinePage = () => {
         setShowNoButton(false);
       }
     } else {
-      setYesButtonSize(1); // Reset button size when the user clicks "Yes"
+      setYesButtonSize(1); // Reset button size when the user clicks "Тийм"
       setPersuadeText('');
       setShowNoButton(false);
       // Trigger the "Thanks" animation
@@ -146,7 +146,7 @@ const ValentinePage = () => {
             }}
           />
           <h2 style={{ color: 'darkslategray', fontSize: '2em' }}>
-            Thanks for being my valentine! Will be seeing you soon! 🥰
+            Миний Валентин болсонд баярлалаа! Удахгүй уулзацгаая! 🥰
           </h2>
           <button
             onClick={handleNextPage}
